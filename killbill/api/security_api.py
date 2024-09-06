@@ -57,11 +57,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_role_definition(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.add_role_definition(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param RoleDefinition body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -71,7 +71,7 @@ class SecurityApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.add_role_definition_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.add_role_definition_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -82,11 +82,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_role_definition_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.add_role_definition_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param RoleDefinition body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -97,7 +97,7 @@ class SecurityApi(object):
         """
 
         all_params = ['body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -161,7 +161,7 @@ class SecurityApi(object):
             files=local_var_files,
             response_type='RoleDefinition',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -172,11 +172,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_user_roles(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.add_user_roles(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param UserRoles body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -186,7 +186,7 @@ class SecurityApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.add_user_roles_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.add_user_roles_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -197,11 +197,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_user_roles_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.add_user_roles_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param UserRoles body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -212,7 +212,7 @@ class SecurityApi(object):
         """
 
         all_params = ['body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -276,7 +276,7 @@ class SecurityApi(object):
             files=local_var_files,
             response_type='UserRoles',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -287,17 +287,17 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_current_user_permissions(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_current_user_permissions(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: List[Str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_current_user_permissions_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_current_user_permissions_with_http_info(**kwargs)  # noqa: E501
@@ -308,18 +308,18 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_current_user_permissions_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_current_user_permissions_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: List[Str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -363,7 +363,7 @@ class SecurityApi(object):
             files=local_var_files,
             response_type='List[Str]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -374,17 +374,17 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_current_user_subject(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_current_user_subject(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: Subject
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_current_user_subject_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_current_user_subject_with_http_info(**kwargs)  # noqa: E501
@@ -395,18 +395,18 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_current_user_subject_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_current_user_subject_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: Subject
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -450,7 +450,7 @@ class SecurityApi(object):
             files=local_var_files,
             response_type='Subject',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -461,18 +461,18 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_role_definition(role, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_role_definition(role, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str role: (required)
         :return: RoleDefinition
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_role_definition_with_http_info(role, **kwargs)  # noqa: E501
         else:
             (data) = self.get_role_definition_with_http_info(role, **kwargs)  # noqa: E501
@@ -483,11 +483,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_role_definition_with_http_info(role, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_role_definition_with_http_info(role, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str role: (required)
         :return: RoleDefinition
                  If the method is called asynchronously,
@@ -495,7 +495,7 @@ class SecurityApi(object):
         """
 
         all_params = ['role']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -547,7 +547,7 @@ class SecurityApi(object):
             files=local_var_files,
             response_type='RoleDefinition',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -558,18 +558,18 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_user_roles(username, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_user_roles(username, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str username: (required)
         :return: UserRoles
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_user_roles_with_http_info(username, **kwargs)  # noqa: E501
         else:
             (data) = self.get_user_roles_with_http_info(username, **kwargs)  # noqa: E501
@@ -580,11 +580,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_user_roles_with_http_info(username, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_user_roles_with_http_info(username, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str username: (required)
         :return: UserRoles
                  If the method is called asynchronously,
@@ -592,7 +592,7 @@ class SecurityApi(object):
         """
 
         all_params = ['username']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -644,7 +644,7 @@ class SecurityApi(object):
             files=local_var_files,
             response_type='UserRoles',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -655,11 +655,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.invalidate_user(username, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.invalidate_user(username, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str username: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -669,7 +669,7 @@ class SecurityApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.invalidate_user_with_http_info(username, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.invalidate_user_with_http_info(username, created_by, **kwargs)  # noqa: E501
@@ -680,11 +680,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.invalidate_user_with_http_info(username, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.invalidate_user_with_http_info(username, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str username: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -695,7 +695,7 @@ class SecurityApi(object):
         """
 
         all_params = ['username', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -761,7 +761,7 @@ class SecurityApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -772,11 +772,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_role_definition(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.update_role_definition(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param RoleDefinition body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -786,7 +786,7 @@ class SecurityApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.update_role_definition_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.update_role_definition_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -797,11 +797,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_role_definition_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.update_role_definition_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param RoleDefinition body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -812,7 +812,7 @@ class SecurityApi(object):
         """
 
         all_params = ['body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -876,7 +876,7 @@ class SecurityApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -887,11 +887,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_user_password(username, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.update_user_password(username, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str username: (required)
         :param UserRoles body: (required)
         :param Str created_by: (required)
@@ -902,7 +902,7 @@ class SecurityApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.update_user_password_with_http_info(username, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.update_user_password_with_http_info(username, body, created_by, **kwargs)  # noqa: E501
@@ -913,11 +913,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_user_password_with_http_info(username, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.update_user_password_with_http_info(username, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str username: (required)
         :param UserRoles body: (required)
         :param Str created_by: (required)
@@ -929,7 +929,7 @@ class SecurityApi(object):
         """
 
         all_params = ['username', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1001,7 +1001,7 @@ class SecurityApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1012,11 +1012,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_user_roles(username, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.update_user_roles(username, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str username: (required)
         :param UserRoles body: (required)
         :param Str created_by: (required)
@@ -1027,7 +1027,7 @@ class SecurityApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.update_user_roles_with_http_info(username, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.update_user_roles_with_http_info(username, body, created_by, **kwargs)  # noqa: E501
@@ -1038,11 +1038,11 @@ class SecurityApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_user_roles_with_http_info(username, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.update_user_roles_with_http_info(username, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str username: (required)
         :param UserRoles body: (required)
         :param Str created_by: (required)
@@ -1054,7 +1054,7 @@ class SecurityApi(object):
         """
 
         all_params = ['username', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1126,7 +1126,7 @@ class SecurityApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

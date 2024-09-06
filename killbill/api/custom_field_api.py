@@ -57,18 +57,18 @@ class CustomFieldApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_custom_field_audit_logs_with_history(custom_field_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_custom_field_audit_logs_with_history(custom_field_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str custom_field_id: (required)
         :return: List[AuditLog]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_custom_field_audit_logs_with_history_with_http_info(custom_field_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_custom_field_audit_logs_with_history_with_http_info(custom_field_id, **kwargs)  # noqa: E501
@@ -79,11 +79,11 @@ class CustomFieldApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_custom_field_audit_logs_with_history_with_http_info(custom_field_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_custom_field_audit_logs_with_history_with_http_info(custom_field_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str custom_field_id: (required)
         :return: List[AuditLog]
                  If the method is called asynchronously,
@@ -91,7 +91,7 @@ class CustomFieldApi(object):
         """
 
         all_params = ['custom_field_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -143,7 +143,7 @@ class CustomFieldApi(object):
             files=local_var_files,
             response_type='List[AuditLog]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -154,11 +154,11 @@ class CustomFieldApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_custom_fields(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_custom_fields(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Int offset:
         :param Int limit:
         :param Str audit:
@@ -167,7 +167,7 @@ class CustomFieldApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_custom_fields_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_custom_fields_with_http_info(**kwargs)  # noqa: E501
@@ -178,11 +178,11 @@ class CustomFieldApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_custom_fields_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_custom_fields_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Int offset:
         :param Int limit:
         :param Str audit:
@@ -192,7 +192,7 @@ class CustomFieldApi(object):
         """
 
         all_params = ['offset', 'limit', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -242,7 +242,7 @@ class CustomFieldApi(object):
             files=local_var_files,
             response_type='List[CustomField]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -253,11 +253,11 @@ class CustomFieldApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_custom_fields(search_key, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.search_custom_fields(search_key, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str search_key: (required)
         :param Int offset:
         :param Int limit:
@@ -267,7 +267,7 @@ class CustomFieldApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.search_custom_fields_with_http_info(search_key, **kwargs)  # noqa: E501
         else:
             (data) = self.search_custom_fields_with_http_info(search_key, **kwargs)  # noqa: E501
@@ -278,11 +278,11 @@ class CustomFieldApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_custom_fields_with_http_info(search_key, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.search_custom_fields_with_http_info(search_key, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str search_key: (required)
         :param Int offset:
         :param Int limit:
@@ -293,7 +293,7 @@ class CustomFieldApi(object):
         """
 
         all_params = ['search_key', 'offset', 'limit', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -351,7 +351,7 @@ class CustomFieldApi(object):
             files=local_var_files,
             response_type='List[CustomField]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -362,11 +362,11 @@ class CustomFieldApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_custom_fields_by_type_name(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.search_custom_fields_by_type_name(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str object_type:
         :param Str field_name:
         :param Str field_value:
@@ -378,7 +378,7 @@ class CustomFieldApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.search_custom_fields_by_type_name_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.search_custom_fields_by_type_name_with_http_info(**kwargs)  # noqa: E501
@@ -389,11 +389,11 @@ class CustomFieldApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_custom_fields_by_type_name_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.search_custom_fields_by_type_name_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str object_type:
         :param Str field_name:
         :param Str field_value:
@@ -406,7 +406,7 @@ class CustomFieldApi(object):
         """
 
         all_params = ['object_type', 'field_name', 'field_value', 'offset', 'limit', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -462,7 +462,7 @@ class CustomFieldApi(object):
             files=local_var_files,
             response_type='List[CustomField]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

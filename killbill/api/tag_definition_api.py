@@ -57,11 +57,11 @@ class TagDefinitionApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_tag_definition(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_tag_definition(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param TagDefinition body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -71,7 +71,7 @@ class TagDefinitionApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_tag_definition_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_tag_definition_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -82,11 +82,11 @@ class TagDefinitionApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_tag_definition_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_tag_definition_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param TagDefinition body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -97,7 +97,7 @@ class TagDefinitionApi(object):
         """
 
         all_params = ['body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -161,7 +161,7 @@ class TagDefinitionApi(object):
             files=local_var_files,
             response_type='TagDefinition',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -172,11 +172,11 @@ class TagDefinitionApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_tag_definition(tag_definition_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_tag_definition(tag_definition_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str tag_definition_id: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -186,7 +186,7 @@ class TagDefinitionApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_tag_definition_with_http_info(tag_definition_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_tag_definition_with_http_info(tag_definition_id, created_by, **kwargs)  # noqa: E501
@@ -197,11 +197,11 @@ class TagDefinitionApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_tag_definition_with_http_info(tag_definition_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_tag_definition_with_http_info(tag_definition_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str tag_definition_id: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -212,7 +212,7 @@ class TagDefinitionApi(object):
         """
 
         all_params = ['tag_definition_id', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -274,7 +274,7 @@ class TagDefinitionApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -285,11 +285,11 @@ class TagDefinitionApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_tag_definition(tag_definition_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_tag_definition(tag_definition_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str tag_definition_id: (required)
         :param Str audit:
         :return: TagDefinition
@@ -297,7 +297,7 @@ class TagDefinitionApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_tag_definition_with_http_info(tag_definition_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_tag_definition_with_http_info(tag_definition_id, **kwargs)  # noqa: E501
@@ -308,11 +308,11 @@ class TagDefinitionApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_tag_definition_with_http_info(tag_definition_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_tag_definition_with_http_info(tag_definition_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str tag_definition_id: (required)
         :param Str audit:
         :return: TagDefinition
@@ -321,7 +321,7 @@ class TagDefinitionApi(object):
         """
 
         all_params = ['tag_definition_id', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -375,7 +375,7 @@ class TagDefinitionApi(object):
             files=local_var_files,
             response_type='TagDefinition',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -386,18 +386,18 @@ class TagDefinitionApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_tag_definition_audit_logs_with_history(tag_definition_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_tag_definition_audit_logs_with_history(tag_definition_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str tag_definition_id: (required)
         :return: List[AuditLog]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_tag_definition_audit_logs_with_history_with_http_info(tag_definition_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_tag_definition_audit_logs_with_history_with_http_info(tag_definition_id, **kwargs)  # noqa: E501
@@ -408,11 +408,11 @@ class TagDefinitionApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_tag_definition_audit_logs_with_history_with_http_info(tag_definition_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_tag_definition_audit_logs_with_history_with_http_info(tag_definition_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str tag_definition_id: (required)
         :return: List[AuditLog]
                  If the method is called asynchronously,
@@ -420,7 +420,7 @@ class TagDefinitionApi(object):
         """
 
         all_params = ['tag_definition_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -472,7 +472,7 @@ class TagDefinitionApi(object):
             files=local_var_files,
             response_type='List[AuditLog]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -483,18 +483,18 @@ class TagDefinitionApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_tag_definitions(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_tag_definitions(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str audit:
         :return: List[TagDefinition]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_tag_definitions_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_tag_definitions_with_http_info(**kwargs)  # noqa: E501
@@ -505,11 +505,11 @@ class TagDefinitionApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_tag_definitions_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_tag_definitions_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str audit:
         :return: List[TagDefinition]
                  If the method is called asynchronously,
@@ -517,7 +517,7 @@ class TagDefinitionApi(object):
         """
 
         all_params = ['audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -563,7 +563,7 @@ class TagDefinitionApi(object):
             files=local_var_files,
             response_type='List[TagDefinition]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

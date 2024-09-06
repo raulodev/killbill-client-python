@@ -57,11 +57,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_bundle_blocking_state(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.add_bundle_blocking_state(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param BlockingState body: (required)
         :param Str created_by: (required)
@@ -74,7 +74,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.add_bundle_blocking_state_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.add_bundle_blocking_state_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
@@ -85,11 +85,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_bundle_blocking_state_with_http_info(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.add_bundle_blocking_state_with_http_info(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param BlockingState body: (required)
         :param Str created_by: (required)
@@ -103,7 +103,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'body', 'created_by', 'requested_date', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -176,7 +176,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type='List[BlockingState]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -187,11 +187,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_bundle_custom_fields(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_bundle_custom_fields(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param List[CustomField] body: (required)
         :param Str created_by: (required)
@@ -202,7 +202,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_bundle_custom_fields_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_bundle_custom_fields_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
@@ -213,11 +213,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_bundle_custom_fields_with_http_info(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_bundle_custom_fields_with_http_info(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param List[CustomField] body: (required)
         :param Str created_by: (required)
@@ -229,7 +229,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -301,7 +301,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type='List[CustomField]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -312,11 +312,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_bundle_tags(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_bundle_tags(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param List[Str] body: (required)
         :param Str created_by: (required)
@@ -327,7 +327,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_bundle_tags_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_bundle_tags_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
@@ -338,11 +338,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_bundle_tags_with_http_info(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_bundle_tags_with_http_info(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param List[Str] body: (required)
         :param Str created_by: (required)
@@ -354,7 +354,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -426,7 +426,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type='List[Tag]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -437,11 +437,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_bundle_custom_fields(bundle_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_bundle_custom_fields(bundle_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str created_by: (required)
         :param List[Str] custom_field:
@@ -452,7 +452,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_bundle_custom_fields_with_http_info(bundle_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_bundle_custom_fields_with_http_info(bundle_id, created_by, **kwargs)  # noqa: E501
@@ -463,11 +463,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_bundle_custom_fields_with_http_info(bundle_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_bundle_custom_fields_with_http_info(bundle_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str created_by: (required)
         :param List[Str] custom_field:
@@ -479,7 +479,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'created_by', 'custom_field', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -548,7 +548,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -559,11 +559,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_bundle_tags(bundle_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_bundle_tags(bundle_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str created_by: (required)
         :param List[Str] tag_def:
@@ -574,7 +574,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_bundle_tags_with_http_info(bundle_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_bundle_tags_with_http_info(bundle_id, created_by, **kwargs)  # noqa: E501
@@ -585,11 +585,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_bundle_tags_with_http_info(bundle_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_bundle_tags_with_http_info(bundle_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str created_by: (required)
         :param List[Str] tag_def:
@@ -601,7 +601,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'created_by', 'tag_def', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -670,7 +670,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -681,11 +681,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundle(bundle_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundle(bundle_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str audit:
         :return: Bundle
@@ -693,7 +693,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_bundle_with_http_info(bundle_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_bundle_with_http_info(bundle_id, **kwargs)  # noqa: E501
@@ -704,11 +704,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundle_with_http_info(bundle_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundle_with_http_info(bundle_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str audit:
         :return: Bundle
@@ -717,7 +717,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -771,7 +771,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type='Bundle',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -782,18 +782,18 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundle_audit_logs_with_history(bundle_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundle_audit_logs_with_history(bundle_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :return: List[AuditLog]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_bundle_audit_logs_with_history_with_http_info(bundle_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_bundle_audit_logs_with_history_with_http_info(bundle_id, **kwargs)  # noqa: E501
@@ -804,11 +804,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundle_audit_logs_with_history_with_http_info(bundle_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundle_audit_logs_with_history_with_http_info(bundle_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :return: List[AuditLog]
                  If the method is called asynchronously,
@@ -816,7 +816,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -868,7 +868,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type='List[AuditLog]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -879,11 +879,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundle_by_key(external_key, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundle_by_key(external_key, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str external_key: (required)
         :param Bool included_deleted:
         :param Str audit:
@@ -892,7 +892,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_bundle_by_key_with_http_info(external_key, **kwargs)  # noqa: E501
         else:
             (data) = self.get_bundle_by_key_with_http_info(external_key, **kwargs)  # noqa: E501
@@ -903,11 +903,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundle_by_key_with_http_info(external_key, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundle_by_key_with_http_info(external_key, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str external_key: (required)
         :param Bool included_deleted:
         :param Str audit:
@@ -917,7 +917,7 @@ class BundleApi(object):
         """
 
         all_params = ['external_key', 'included_deleted', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -971,7 +971,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type='List[Bundle]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -982,11 +982,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundle_custom_fields(bundle_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundle_custom_fields(bundle_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str audit:
         :return: List[CustomField]
@@ -994,7 +994,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_bundle_custom_fields_with_http_info(bundle_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_bundle_custom_fields_with_http_info(bundle_id, **kwargs)  # noqa: E501
@@ -1005,11 +1005,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundle_custom_fields_with_http_info(bundle_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundle_custom_fields_with_http_info(bundle_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str audit:
         :return: List[CustomField]
@@ -1018,7 +1018,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1072,7 +1072,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type='List[CustomField]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1083,11 +1083,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundle_tags(bundle_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundle_tags(bundle_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Bool included_deleted:
         :param Str audit:
@@ -1096,7 +1096,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_bundle_tags_with_http_info(bundle_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_bundle_tags_with_http_info(bundle_id, **kwargs)  # noqa: E501
@@ -1107,11 +1107,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundle_tags_with_http_info(bundle_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundle_tags_with_http_info(bundle_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Bool included_deleted:
         :param Str audit:
@@ -1121,7 +1121,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'included_deleted', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1177,7 +1177,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type='List[Tag]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1188,11 +1188,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundles(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundles(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Int offset:
         :param Int limit:
         :param Str audit:
@@ -1201,7 +1201,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_bundles_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_bundles_with_http_info(**kwargs)  # noqa: E501
@@ -1212,11 +1212,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bundles_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_bundles_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Int offset:
         :param Int limit:
         :param Str audit:
@@ -1226,7 +1226,7 @@ class BundleApi(object):
         """
 
         all_params = ['offset', 'limit', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1276,7 +1276,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type='List[Bundle]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1287,11 +1287,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.modify_bundle_custom_fields(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.modify_bundle_custom_fields(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param List[CustomField] body: (required)
         :param Str created_by: (required)
@@ -1302,7 +1302,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.modify_bundle_custom_fields_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.modify_bundle_custom_fields_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
@@ -1313,11 +1313,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.modify_bundle_custom_fields_with_http_info(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.modify_bundle_custom_fields_with_http_info(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param List[CustomField] body: (required)
         :param Str created_by: (required)
@@ -1329,7 +1329,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1401,7 +1401,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1412,11 +1412,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.pause_bundle(bundle_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.pause_bundle(bundle_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str created_by: (required)
         :param Date requested_date:
@@ -1428,7 +1428,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.pause_bundle_with_http_info(bundle_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.pause_bundle_with_http_info(bundle_id, created_by, **kwargs)  # noqa: E501
@@ -1439,11 +1439,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.pause_bundle_with_http_info(bundle_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.pause_bundle_with_http_info(bundle_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str created_by: (required)
         :param Date requested_date:
@@ -1456,7 +1456,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'created_by', 'requested_date', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1527,7 +1527,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1538,11 +1538,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.rename_external_key(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.rename_external_key(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Bundle body: (required)
         :param Str created_by: (required)
@@ -1553,7 +1553,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.rename_external_key_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.rename_external_key_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
@@ -1564,11 +1564,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.rename_external_key_with_http_info(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.rename_external_key_with_http_info(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Bundle body: (required)
         :param Str created_by: (required)
@@ -1580,7 +1580,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1648,7 +1648,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1659,11 +1659,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.resume_bundle(bundle_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.resume_bundle(bundle_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str created_by: (required)
         :param Date requested_date:
@@ -1675,7 +1675,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.resume_bundle_with_http_info(bundle_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.resume_bundle_with_http_info(bundle_id, created_by, **kwargs)  # noqa: E501
@@ -1686,11 +1686,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.resume_bundle_with_http_info(bundle_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.resume_bundle_with_http_info(bundle_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Str created_by: (required)
         :param Date requested_date:
@@ -1703,7 +1703,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'created_by', 'requested_date', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1774,7 +1774,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1785,11 +1785,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_bundles(search_key, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.search_bundles(search_key, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str search_key: (required)
         :param Int offset:
         :param Int limit:
@@ -1799,7 +1799,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.search_bundles_with_http_info(search_key, **kwargs)  # noqa: E501
         else:
             (data) = self.search_bundles_with_http_info(search_key, **kwargs)  # noqa: E501
@@ -1810,11 +1810,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_bundles_with_http_info(search_key, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.search_bundles_with_http_info(search_key, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str search_key: (required)
         :param Int offset:
         :param Int limit:
@@ -1825,7 +1825,7 @@ class BundleApi(object):
         """
 
         all_params = ['search_key', 'offset', 'limit', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1883,7 +1883,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type='List[Bundle]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1894,11 +1894,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.transfer_bundle(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.transfer_bundle(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Bundle body: (required)
         :param Str created_by: (required)
@@ -1913,7 +1913,7 @@ class BundleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.transfer_bundle_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.transfer_bundle_with_http_info(bundle_id, body, created_by, **kwargs)  # noqa: E501
@@ -1924,11 +1924,11 @@ class BundleApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.transfer_bundle_with_http_info(bundle_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.transfer_bundle_with_http_info(bundle_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str bundle_id: (required)
         :param Bundle body: (required)
         :param Str created_by: (required)
@@ -1944,7 +1944,7 @@ class BundleApi(object):
         """
 
         all_params = ['bundle_id', 'body', 'created_by', 'requested_date', 'billing_policy', 'bcd_transfer', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2025,7 +2025,7 @@ class BundleApi(object):
             files=local_var_files,
             response_type='Bundle',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

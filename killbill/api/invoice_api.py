@@ -57,11 +57,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.adjust_invoice_item(invoice_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.adjust_invoice_item(invoice_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param InvoiceItem body: (required)
         :param Str created_by: (required)
@@ -74,7 +74,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.adjust_invoice_item_with_http_info(invoice_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.adjust_invoice_item_with_http_info(invoice_id, body, created_by, **kwargs)  # noqa: E501
@@ -85,11 +85,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.adjust_invoice_item_with_http_info(invoice_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.adjust_invoice_item_with_http_info(invoice_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param InvoiceItem body: (required)
         :param Str created_by: (required)
@@ -103,7 +103,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'body', 'created_by', 'requested_date', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -180,7 +180,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Invoice',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -191,11 +191,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.commit_invoice(invoice_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.commit_invoice(invoice_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -205,7 +205,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.commit_invoice_with_http_info(invoice_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.commit_invoice_with_http_info(invoice_id, created_by, **kwargs)  # noqa: E501
@@ -216,11 +216,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.commit_invoice_with_http_info(invoice_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.commit_invoice_with_http_info(invoice_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -231,7 +231,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -297,7 +297,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -308,11 +308,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_external_charges(account_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_external_charges(account_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param List[InvoiceItem] body: (required)
         :param Str created_by: (required)
@@ -326,7 +326,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_external_charges_with_http_info(account_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_external_charges_with_http_info(account_id, body, created_by, **kwargs)  # noqa: E501
@@ -337,11 +337,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_external_charges_with_http_info(account_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_external_charges_with_http_info(account_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param List[InvoiceItem] body: (required)
         :param Str created_by: (required)
@@ -356,7 +356,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['account_id', 'body', 'created_by', 'requested_date', 'auto_commit', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -435,7 +435,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[InvoiceItem]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -446,11 +446,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_future_invoice(account_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_future_invoice(account_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param Str created_by: (required)
         :param Date target_date:
@@ -462,7 +462,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_future_invoice_with_http_info(account_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_future_invoice_with_http_info(account_id, created_by, **kwargs)  # noqa: E501
@@ -473,11 +473,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_future_invoice_with_http_info(account_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_future_invoice_with_http_info(account_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param Str created_by: (required)
         :param Date target_date:
@@ -490,7 +490,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['account_id', 'created_by', 'target_date', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -559,7 +559,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Invoice',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -570,11 +570,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_future_invoice_group(account_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_future_invoice_group(account_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param Str created_by: (required)
         :param Date target_date:
@@ -586,7 +586,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_future_invoice_group_with_http_info(account_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_future_invoice_group_with_http_info(account_id, created_by, **kwargs)  # noqa: E501
@@ -597,11 +597,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_future_invoice_group_with_http_info(account_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_future_invoice_group_with_http_info(account_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param Str created_by: (required)
         :param Date target_date:
@@ -614,7 +614,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['account_id', 'created_by', 'target_date', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -683,7 +683,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[Invoice]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -694,11 +694,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_instant_payment(invoice_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_instant_payment(invoice_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param InvoicePayment body: (required)
         :param Str created_by: (required)
@@ -712,7 +712,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_instant_payment_with_http_info(invoice_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_instant_payment_with_http_info(invoice_id, body, created_by, **kwargs)  # noqa: E501
@@ -723,11 +723,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_instant_payment_with_http_info(invoice_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_instant_payment_with_http_info(invoice_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param InvoicePayment body: (required)
         :param Str created_by: (required)
@@ -742,7 +742,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'body', 'created_by', 'external_payment', 'control_plugin_name', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -822,7 +822,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='InvoicePayment',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -833,11 +833,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_invoice_custom_fields(invoice_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_invoice_custom_fields(invoice_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param List[CustomField] body: (required)
         :param Str created_by: (required)
@@ -848,7 +848,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_invoice_custom_fields_with_http_info(invoice_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_invoice_custom_fields_with_http_info(invoice_id, body, created_by, **kwargs)  # noqa: E501
@@ -859,11 +859,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_invoice_custom_fields_with_http_info(invoice_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_invoice_custom_fields_with_http_info(invoice_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param List[CustomField] body: (required)
         :param Str created_by: (required)
@@ -875,7 +875,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -947,7 +947,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[CustomField]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -958,11 +958,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_invoice_tags(invoice_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_invoice_tags(invoice_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param List[Str] body: (required)
         :param Str created_by: (required)
@@ -973,7 +973,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_invoice_tags_with_http_info(invoice_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_invoice_tags_with_http_info(invoice_id, body, created_by, **kwargs)  # noqa: E501
@@ -984,11 +984,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_invoice_tags_with_http_info(invoice_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_invoice_tags_with_http_info(invoice_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param List[Str] body: (required)
         :param Str created_by: (required)
@@ -1000,7 +1000,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1072,7 +1072,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[Tag]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1083,11 +1083,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_migration_invoice(account_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_migration_invoice(account_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param List[InvoiceItem] body: (required)
         :param Str created_by: (required)
@@ -1099,7 +1099,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_migration_invoice_with_http_info(account_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_migration_invoice_with_http_info(account_id, body, created_by, **kwargs)  # noqa: E501
@@ -1110,11 +1110,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_migration_invoice_with_http_info(account_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_migration_invoice_with_http_info(account_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param List[InvoiceItem] body: (required)
         :param Str created_by: (required)
@@ -1127,7 +1127,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['account_id', 'body', 'created_by', 'target_date', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1201,7 +1201,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Invoice',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1212,11 +1212,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_tax_items(account_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_tax_items(account_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param List[InvoiceItem] body: (required)
         :param Str created_by: (required)
@@ -1230,7 +1230,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_tax_items_with_http_info(account_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_tax_items_with_http_info(account_id, body, created_by, **kwargs)  # noqa: E501
@@ -1241,11 +1241,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_tax_items_with_http_info(account_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_tax_items_with_http_info(account_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param List[InvoiceItem] body: (required)
         :param Str created_by: (required)
@@ -1260,7 +1260,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['account_id', 'body', 'created_by', 'auto_commit', 'requested_date', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1339,7 +1339,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[InvoiceItem]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1350,11 +1350,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_cba(invoice_id, invoice_item_id, account_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_cba(invoice_id, invoice_item_id, account_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str invoice_item_id: (required)
         :param Str account_id: (required)
@@ -1366,7 +1366,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_cba_with_http_info(invoice_id, invoice_item_id, account_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_cba_with_http_info(invoice_id, invoice_item_id, account_id, created_by, **kwargs)  # noqa: E501
@@ -1377,11 +1377,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_cba_with_http_info(invoice_id, invoice_item_id, account_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_cba_with_http_info(invoice_id, invoice_item_id, account_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str invoice_item_id: (required)
         :param Str account_id: (required)
@@ -1394,7 +1394,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'invoice_item_id', 'account_id', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1474,7 +1474,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1485,11 +1485,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_invoice_custom_fields(invoice_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_invoice_custom_fields(invoice_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str created_by: (required)
         :param List[Str] custom_field:
@@ -1500,7 +1500,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_invoice_custom_fields_with_http_info(invoice_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_invoice_custom_fields_with_http_info(invoice_id, created_by, **kwargs)  # noqa: E501
@@ -1511,11 +1511,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_invoice_custom_fields_with_http_info(invoice_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_invoice_custom_fields_with_http_info(invoice_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str created_by: (required)
         :param List[Str] custom_field:
@@ -1527,7 +1527,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'created_by', 'custom_field', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1596,7 +1596,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1607,11 +1607,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_invoice_tags(invoice_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_invoice_tags(invoice_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str created_by: (required)
         :param List[Str] tag_def:
@@ -1622,7 +1622,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_invoice_tags_with_http_info(invoice_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_invoice_tags_with_http_info(invoice_id, created_by, **kwargs)  # noqa: E501
@@ -1633,11 +1633,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_invoice_tags_with_http_info(invoice_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_invoice_tags_with_http_info(invoice_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str created_by: (required)
         :param List[Str] tag_def:
@@ -1649,7 +1649,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'created_by', 'tag_def', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1718,7 +1718,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1729,11 +1729,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_dry_run_invoice(body, account_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.generate_dry_run_invoice(body, account_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param InvoiceDryRun body: (required)
         :param Str account_id: (required)
         :param Str created_by: (required)
@@ -1746,7 +1746,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.generate_dry_run_invoice_with_http_info(body, account_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.generate_dry_run_invoice_with_http_info(body, account_id, created_by, **kwargs)  # noqa: E501
@@ -1757,11 +1757,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_dry_run_invoice_with_http_info(body, account_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.generate_dry_run_invoice_with_http_info(body, account_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param InvoiceDryRun body: (required)
         :param Str account_id: (required)
         :param Str created_by: (required)
@@ -1775,7 +1775,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['body', 'account_id', 'created_by', 'target_date', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1850,7 +1850,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Invoice',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1861,18 +1861,18 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_catalog_translation(locale, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_catalog_translation(locale, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str locale: (required)
         :return: Str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_catalog_translation_with_http_info(locale, **kwargs)  # noqa: E501
         else:
             (data) = self.get_catalog_translation_with_http_info(locale, **kwargs)  # noqa: E501
@@ -1883,11 +1883,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_catalog_translation_with_http_info(locale, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_catalog_translation_with_http_info(locale, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str locale: (required)
         :return: Str
                  If the method is called asynchronously,
@@ -1895,7 +1895,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['locale']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1947,7 +1947,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1958,11 +1958,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Bool with_children_items:
         :param Str audit:
@@ -1971,7 +1971,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoice_with_http_info(invoice_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_invoice_with_http_info(invoice_id, **kwargs)  # noqa: E501
@@ -1982,11 +1982,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_with_http_info(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_with_http_info(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Bool with_children_items:
         :param Str audit:
@@ -1996,7 +1996,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'with_children_items', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2052,7 +2052,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Invoice',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2063,18 +2063,18 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_as_html(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_as_html(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :return: Str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoice_as_html_with_http_info(invoice_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_invoice_as_html_with_http_info(invoice_id, **kwargs)  # noqa: E501
@@ -2085,11 +2085,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_as_html_with_http_info(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_as_html_with_http_info(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :return: Str
                  If the method is called asynchronously,
@@ -2097,7 +2097,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2149,7 +2149,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2160,18 +2160,18 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_audit_logs_with_history(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_audit_logs_with_history(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :return: List[AuditLog]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoice_audit_logs_with_history_with_http_info(invoice_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_invoice_audit_logs_with_history_with_http_info(invoice_id, **kwargs)  # noqa: E501
@@ -2182,11 +2182,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_audit_logs_with_history_with_http_info(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_audit_logs_with_history_with_http_info(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :return: List[AuditLog]
                  If the method is called asynchronously,
@@ -2194,7 +2194,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2246,7 +2246,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[AuditLog]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2257,11 +2257,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_by_item_id(item_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_by_item_id(item_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str item_id: (required)
         :param Bool with_children_items:
         :param Str audit:
@@ -2270,7 +2270,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoice_by_item_id_with_http_info(item_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_invoice_by_item_id_with_http_info(item_id, **kwargs)  # noqa: E501
@@ -2281,11 +2281,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_by_item_id_with_http_info(item_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_by_item_id_with_http_info(item_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str item_id: (required)
         :param Bool with_children_items:
         :param Str audit:
@@ -2295,7 +2295,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['item_id', 'with_children_items', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2351,7 +2351,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Invoice',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2362,11 +2362,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_by_number(invoice_number, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_by_number(invoice_number, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Int invoice_number: (required)
         :param Bool with_children_items:
         :param Str audit:
@@ -2375,7 +2375,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoice_by_number_with_http_info(invoice_number, **kwargs)  # noqa: E501
         else:
             (data) = self.get_invoice_by_number_with_http_info(invoice_number, **kwargs)  # noqa: E501
@@ -2386,11 +2386,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_by_number_with_http_info(invoice_number, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_by_number_with_http_info(invoice_number, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Int invoice_number: (required)
         :param Bool with_children_items:
         :param Str audit:
@@ -2400,7 +2400,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_number', 'with_children_items', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2456,7 +2456,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Invoice',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2467,11 +2467,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_custom_fields(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_custom_fields(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str audit:
         :return: List[CustomField]
@@ -2479,7 +2479,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoice_custom_fields_with_http_info(invoice_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_invoice_custom_fields_with_http_info(invoice_id, **kwargs)  # noqa: E501
@@ -2490,11 +2490,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_custom_fields_with_http_info(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_custom_fields_with_http_info(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str audit:
         :return: List[CustomField]
@@ -2503,7 +2503,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2557,7 +2557,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[CustomField]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2568,18 +2568,18 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_mp_template(locale, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_mp_template(locale, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str locale: (required)
         :return: Str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoice_mp_template_with_http_info(locale, **kwargs)  # noqa: E501
         else:
             (data) = self.get_invoice_mp_template_with_http_info(locale, **kwargs)  # noqa: E501
@@ -2590,11 +2590,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_mp_template_with_http_info(locale, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_mp_template_with_http_info(locale, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str locale: (required)
         :return: Str
                  If the method is called asynchronously,
@@ -2602,7 +2602,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['locale']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2654,7 +2654,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2665,11 +2665,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_tags(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_tags(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Bool included_deleted:
         :param Str audit:
@@ -2678,7 +2678,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoice_tags_with_http_info(invoice_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_invoice_tags_with_http_info(invoice_id, **kwargs)  # noqa: E501
@@ -2689,11 +2689,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_tags_with_http_info(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_tags_with_http_info(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Bool included_deleted:
         :param Str audit:
@@ -2703,7 +2703,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'included_deleted', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2759,7 +2759,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[Tag]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2770,17 +2770,17 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_template(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_template(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: Str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoice_template_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_invoice_template_with_http_info(**kwargs)  # noqa: E501
@@ -2791,18 +2791,18 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_template_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_template_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: Str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2846,7 +2846,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2857,18 +2857,18 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_translation(locale, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_translation(locale, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str locale: (required)
         :return: Str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoice_translation_with_http_info(locale, **kwargs)  # noqa: E501
         else:
             (data) = self.get_invoice_translation_with_http_info(locale, **kwargs)  # noqa: E501
@@ -2879,11 +2879,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoice_translation_with_http_info(locale, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoice_translation_with_http_info(locale, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str locale: (required)
         :return: Str
                  If the method is called asynchronously,
@@ -2891,7 +2891,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['locale']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2943,7 +2943,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2954,11 +2954,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoices(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoices(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Int offset:
         :param Int limit:
         :param Str audit:
@@ -2967,7 +2967,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoices_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_invoices_with_http_info(**kwargs)  # noqa: E501
@@ -2978,11 +2978,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoices_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoices_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Int offset:
         :param Int limit:
         :param Str audit:
@@ -2992,7 +2992,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['offset', 'limit', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3042,7 +3042,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[Invoice]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -3053,11 +3053,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoices_group(group_id, account_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoices_group(group_id, account_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str group_id: (required)
         :param Str account_id: (required)
         :param Bool with_children_items:
@@ -3067,7 +3067,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_invoices_group_with_http_info(group_id, account_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_invoices_group_with_http_info(group_id, account_id, **kwargs)  # noqa: E501
@@ -3078,11 +3078,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_invoices_group_with_http_info(group_id, account_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_invoices_group_with_http_info(group_id, account_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str group_id: (required)
         :param Str account_id: (required)
         :param Bool with_children_items:
@@ -3093,7 +3093,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['group_id', 'account_id', 'with_children_items', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3155,7 +3155,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[Invoice]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -3166,11 +3166,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_payments_for_invoice(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_payments_for_invoice(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Bool with_plugin_info:
         :param Bool with_attempts:
@@ -3180,7 +3180,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_payments_for_invoice_with_http_info(invoice_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_payments_for_invoice_with_http_info(invoice_id, **kwargs)  # noqa: E501
@@ -3191,11 +3191,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_payments_for_invoice_with_http_info(invoice_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_payments_for_invoice_with_http_info(invoice_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Bool with_plugin_info:
         :param Bool with_attempts:
@@ -3206,7 +3206,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'with_plugin_info', 'with_attempts', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3264,7 +3264,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[InvoicePayment]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -3275,11 +3275,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.modify_invoice_custom_fields(invoice_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.modify_invoice_custom_fields(invoice_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param List[CustomField] body: (required)
         :param Str created_by: (required)
@@ -3290,7 +3290,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.modify_invoice_custom_fields_with_http_info(invoice_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.modify_invoice_custom_fields_with_http_info(invoice_id, body, created_by, **kwargs)  # noqa: E501
@@ -3301,11 +3301,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.modify_invoice_custom_fields_with_http_info(invoice_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.modify_invoice_custom_fields_with_http_info(invoice_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param List[CustomField] body: (required)
         :param Str created_by: (required)
@@ -3317,7 +3317,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3389,7 +3389,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -3400,11 +3400,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_invoices(search_key, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.search_invoices(search_key, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str search_key: (required)
         :param Int offset:
         :param Int limit:
@@ -3414,7 +3414,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.search_invoices_with_http_info(search_key, **kwargs)  # noqa: E501
         else:
             (data) = self.search_invoices_with_http_info(search_key, **kwargs)  # noqa: E501
@@ -3425,11 +3425,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_invoices_with_http_info(search_key, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.search_invoices_with_http_info(search_key, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str search_key: (required)
         :param Int offset:
         :param Int limit:
@@ -3440,7 +3440,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['search_key', 'offset', 'limit', 'audit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3498,7 +3498,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='List[Invoice]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -3509,11 +3509,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_catalog_translation(locale, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_catalog_translation(locale, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str locale: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -3525,7 +3525,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.upload_catalog_translation_with_http_info(locale, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.upload_catalog_translation_with_http_info(locale, body, created_by, **kwargs)  # noqa: E501
@@ -3536,11 +3536,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_catalog_translation_with_http_info(locale, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_catalog_translation_with_http_info(locale, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str locale: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -3553,7 +3553,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['locale', 'body', 'created_by', 'delete_if_exists', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3627,7 +3627,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -3638,11 +3638,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_invoice_mp_template(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_invoice_mp_template(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Bool delete_if_exists:
@@ -3653,7 +3653,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.upload_invoice_mp_template_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.upload_invoice_mp_template_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -3664,11 +3664,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_invoice_mp_template_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_invoice_mp_template_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Bool delete_if_exists:
@@ -3680,7 +3680,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['body', 'created_by', 'delete_if_exists', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3746,7 +3746,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -3757,11 +3757,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_invoice_template(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_invoice_template(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Bool delete_if_exists:
@@ -3772,7 +3772,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.upload_invoice_template_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.upload_invoice_template_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -3783,11 +3783,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_invoice_template_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_invoice_template_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Bool delete_if_exists:
@@ -3799,7 +3799,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['body', 'created_by', 'delete_if_exists', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3865,7 +3865,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -3876,11 +3876,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_invoice_translation(locale, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_invoice_translation(locale, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str locale: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -3892,7 +3892,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.upload_invoice_translation_with_http_info(locale, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.upload_invoice_translation_with_http_info(locale, body, created_by, **kwargs)  # noqa: E501
@@ -3903,11 +3903,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_invoice_translation_with_http_info(locale, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_invoice_translation_with_http_info(locale, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str locale: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -3920,7 +3920,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['locale', 'body', 'created_by', 'delete_if_exists', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3994,7 +3994,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -4005,11 +4005,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.void_invoice(invoice_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.void_invoice(invoice_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -4019,7 +4019,7 @@ class InvoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.void_invoice_with_http_info(invoice_id, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.void_invoice_with_http_info(invoice_id, created_by, **kwargs)  # noqa: E501
@@ -4030,11 +4030,11 @@ class InvoiceApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.void_invoice_with_http_info(invoice_id, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.void_invoice_with_http_info(invoice_id, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str invoice_id: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -4045,7 +4045,7 @@ class InvoiceApi(object):
         """
 
         all_params = ['invoice_id', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4111,7 +4111,7 @@ class InvoiceApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

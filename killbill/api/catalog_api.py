@@ -57,11 +57,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_simple_plan(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.add_simple_plan(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param SimplePlan body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -71,7 +71,7 @@ class CatalogApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.add_simple_plan_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.add_simple_plan_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -82,11 +82,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_simple_plan_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.add_simple_plan_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param SimplePlan body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -97,7 +97,7 @@ class CatalogApi(object):
         """
 
         all_params = ['body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -161,7 +161,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -172,11 +172,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_catalog(created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_catalog(created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str created_by: (required)
         :param Str reason:
         :param Str comment:
@@ -185,7 +185,7 @@ class CatalogApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_catalog_with_http_info(created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_catalog_with_http_info(created_by, **kwargs)  # noqa: E501
@@ -196,11 +196,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_catalog_with_http_info(created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_catalog_with_http_info(created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str created_by: (required)
         :param Str reason:
         :param Str comment:
@@ -210,7 +210,7 @@ class CatalogApi(object):
         """
 
         all_params = ['created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -260,7 +260,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -271,11 +271,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_available_addons(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_available_addons(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str base_product_name:
         :param Str price_list_name:
         :param Str account_id:
@@ -284,7 +284,7 @@ class CatalogApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_available_addons_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_available_addons_with_http_info(**kwargs)  # noqa: E501
@@ -295,11 +295,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_available_addons_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_available_addons_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str base_product_name:
         :param Str price_list_name:
         :param Str account_id:
@@ -309,7 +309,7 @@ class CatalogApi(object):
         """
 
         all_params = ['base_product_name', 'price_list_name', 'account_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -359,7 +359,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='List[PlanDetail]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -370,18 +370,18 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_available_base_plans(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_available_base_plans(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id:
         :return: List[PlanDetail]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_available_base_plans_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_available_base_plans_with_http_info(**kwargs)  # noqa: E501
@@ -392,11 +392,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_available_base_plans_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_available_base_plans_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id:
         :return: List[PlanDetail]
                  If the method is called asynchronously,
@@ -404,7 +404,7 @@ class CatalogApi(object):
         """
 
         all_params = ['account_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -450,7 +450,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='List[PlanDetail]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -461,11 +461,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_catalog_json(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_catalog_json(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Datetime requested_date:
         :param Str account_id:
         :return: List[Catalog]
@@ -473,7 +473,7 @@ class CatalogApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_catalog_json_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_catalog_json_with_http_info(**kwargs)  # noqa: E501
@@ -484,11 +484,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_catalog_json_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_catalog_json_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Datetime requested_date:
         :param Str account_id:
         :return: List[Catalog]
@@ -497,7 +497,7 @@ class CatalogApi(object):
         """
 
         all_params = ['requested_date', 'account_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -545,7 +545,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='List[Catalog]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -556,18 +556,18 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_catalog_versions(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_catalog_versions(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id:
         :return: List[Datetime]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_catalog_versions_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_catalog_versions_with_http_info(**kwargs)  # noqa: E501
@@ -578,11 +578,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_catalog_versions_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_catalog_versions_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id:
         :return: List[Datetime]
                  If the method is called asynchronously,
@@ -590,7 +590,7 @@ class CatalogApi(object):
         """
 
         all_params = ['account_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -636,7 +636,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='List[Datetime]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -647,11 +647,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_catalog_xml(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_catalog_xml(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Datetime requested_date:
         :param Str account_id:
         :return: Str
@@ -659,7 +659,7 @@ class CatalogApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_catalog_xml_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_catalog_xml_with_http_info(**kwargs)  # noqa: E501
@@ -670,11 +670,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_catalog_xml_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_catalog_xml_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Datetime requested_date:
         :param Str account_id:
         :return: Str
@@ -683,7 +683,7 @@ class CatalogApi(object):
         """
 
         all_params = ['requested_date', 'account_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -731,7 +731,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -742,11 +742,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_phase_for_subscription_and_date(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_phase_for_subscription_and_date(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id:
         :param Date requested_date:
         :return: Phase
@@ -754,7 +754,7 @@ class CatalogApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_phase_for_subscription_and_date_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_phase_for_subscription_and_date_with_http_info(**kwargs)  # noqa: E501
@@ -765,11 +765,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_phase_for_subscription_and_date_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_phase_for_subscription_and_date_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id:
         :param Date requested_date:
         :return: Phase
@@ -778,7 +778,7 @@ class CatalogApi(object):
         """
 
         all_params = ['subscription_id', 'requested_date']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -826,7 +826,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='Phase',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -837,11 +837,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_plan_for_subscription_and_date(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_plan_for_subscription_and_date(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id:
         :param Date requested_date:
         :return: Plan
@@ -849,7 +849,7 @@ class CatalogApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_plan_for_subscription_and_date_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_plan_for_subscription_and_date_with_http_info(**kwargs)  # noqa: E501
@@ -860,11 +860,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_plan_for_subscription_and_date_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_plan_for_subscription_and_date_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id:
         :param Date requested_date:
         :return: Plan
@@ -873,7 +873,7 @@ class CatalogApi(object):
         """
 
         all_params = ['subscription_id', 'requested_date']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -921,7 +921,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='Plan',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -932,11 +932,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_price_list_for_subscription_and_date(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_price_list_for_subscription_and_date(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id:
         :param Date requested_date:
         :return: PriceList
@@ -944,7 +944,7 @@ class CatalogApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_price_list_for_subscription_and_date_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_price_list_for_subscription_and_date_with_http_info(**kwargs)  # noqa: E501
@@ -955,11 +955,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_price_list_for_subscription_and_date_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_price_list_for_subscription_and_date_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id:
         :param Date requested_date:
         :return: PriceList
@@ -968,7 +968,7 @@ class CatalogApi(object):
         """
 
         all_params = ['subscription_id', 'requested_date']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1016,7 +1016,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='PriceList',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1027,11 +1027,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_product_for_subscription_and_date(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_product_for_subscription_and_date(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id:
         :param Date requested_date:
         :return: Product
@@ -1039,7 +1039,7 @@ class CatalogApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_product_for_subscription_and_date_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_product_for_subscription_and_date_with_http_info(**kwargs)  # noqa: E501
@@ -1050,11 +1050,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_product_for_subscription_and_date_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_product_for_subscription_and_date_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id:
         :param Date requested_date:
         :return: Product
@@ -1063,7 +1063,7 @@ class CatalogApi(object):
         """
 
         all_params = ['subscription_id', 'requested_date']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1111,7 +1111,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='Product',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1122,11 +1122,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_catalog_xml(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_catalog_xml(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -1136,7 +1136,7 @@ class CatalogApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.upload_catalog_xml_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.upload_catalog_xml_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -1147,11 +1147,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_catalog_xml_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_catalog_xml_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -1162,7 +1162,7 @@ class CatalogApi(object):
         """
 
         all_params = ['body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1222,7 +1222,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='Str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1233,11 +1233,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.validate_catalog_xml(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.validate_catalog_xml(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -1247,7 +1247,7 @@ class CatalogApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.validate_catalog_xml_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.validate_catalog_xml_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -1258,11 +1258,11 @@ class CatalogApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.validate_catalog_xml_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.validate_catalog_xml_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -1273,7 +1273,7 @@ class CatalogApi(object):
         """
 
         all_params = ['body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1337,7 +1337,7 @@ class CatalogApi(object):
             files=local_var_files,
             response_type='CatalogValidation',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

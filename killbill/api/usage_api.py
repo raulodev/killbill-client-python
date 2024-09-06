@@ -57,11 +57,11 @@ class UsageApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_all_usage(subscription_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_all_usage(subscription_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id: (required)
         :param Date start_date:
         :param Date end_date:
@@ -71,7 +71,7 @@ class UsageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_all_usage_with_http_info(subscription_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_all_usage_with_http_info(subscription_id, **kwargs)  # noqa: E501
@@ -82,11 +82,11 @@ class UsageApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_all_usage_with_http_info(subscription_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_all_usage_with_http_info(subscription_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id: (required)
         :param Date start_date:
         :param Date end_date:
@@ -97,7 +97,7 @@ class UsageApi(object):
         """
 
         all_params = ['subscription_id', 'start_date', 'end_date', 'plugin_property']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -156,7 +156,7 @@ class UsageApi(object):
             files=local_var_files,
             response_type='RolledUpUsage',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -167,11 +167,11 @@ class UsageApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_usage(subscription_id, unit_type, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_usage(subscription_id, unit_type, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id: (required)
         :param Str unit_type: (required)
         :param Date start_date:
@@ -182,7 +182,7 @@ class UsageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_usage_with_http_info(subscription_id, unit_type, **kwargs)  # noqa: E501
         else:
             (data) = self.get_usage_with_http_info(subscription_id, unit_type, **kwargs)  # noqa: E501
@@ -193,11 +193,11 @@ class UsageApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_usage_with_http_info(subscription_id, unit_type, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_usage_with_http_info(subscription_id, unit_type, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str subscription_id: (required)
         :param Str unit_type: (required)
         :param Date start_date:
@@ -209,7 +209,7 @@ class UsageApi(object):
         """
 
         all_params = ['subscription_id', 'unit_type', 'start_date', 'end_date', 'plugin_property']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -274,7 +274,7 @@ class UsageApi(object):
             files=local_var_files,
             response_type='RolledUpUsage',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -285,11 +285,11 @@ class UsageApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.record_usage(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.record_usage(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param SubscriptionUsageRecord body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -299,7 +299,7 @@ class UsageApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.record_usage_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.record_usage_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -310,11 +310,11 @@ class UsageApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.record_usage_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.record_usage_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param SubscriptionUsageRecord body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -325,7 +325,7 @@ class UsageApi(object):
         """
 
         all_params = ['body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -389,7 +389,7 @@ class UsageApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

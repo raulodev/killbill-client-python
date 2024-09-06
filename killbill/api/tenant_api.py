@@ -57,11 +57,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_tenant(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_tenant(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Tenant body: (required)
         :param Str created_by: (required)
         :param Bool use_global_default:
@@ -72,7 +72,7 @@ class TenantApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.create_tenant_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.create_tenant_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -83,11 +83,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_tenant_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.create_tenant_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Tenant body: (required)
         :param Str created_by: (required)
         :param Bool use_global_default:
@@ -99,7 +99,7 @@ class TenantApi(object):
         """
 
         all_params = ['body', 'created_by', 'use_global_default', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -165,7 +165,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='Tenant',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -176,11 +176,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_per_tenant_configuration(created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_per_tenant_configuration(created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str created_by: (required)
         :param Str reason:
         :param Str comment:
@@ -189,7 +189,7 @@ class TenantApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_per_tenant_configuration_with_http_info(created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_per_tenant_configuration_with_http_info(created_by, **kwargs)  # noqa: E501
@@ -200,11 +200,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_per_tenant_configuration_with_http_info(created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_per_tenant_configuration_with_http_info(created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str created_by: (required)
         :param Str reason:
         :param Str comment:
@@ -214,7 +214,7 @@ class TenantApi(object):
         """
 
         all_params = ['created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -264,7 +264,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -275,11 +275,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_plugin_configuration(plugin_name, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_plugin_configuration(plugin_name, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -289,7 +289,7 @@ class TenantApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_plugin_configuration_with_http_info(plugin_name, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_plugin_configuration_with_http_info(plugin_name, created_by, **kwargs)  # noqa: E501
@@ -300,11 +300,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_plugin_configuration_with_http_info(plugin_name, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_plugin_configuration_with_http_info(plugin_name, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -315,7 +315,7 @@ class TenantApi(object):
         """
 
         all_params = ['plugin_name', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -373,7 +373,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -384,11 +384,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_plugin_payment_state_machine_config(plugin_name, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_plugin_payment_state_machine_config(plugin_name, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -398,7 +398,7 @@ class TenantApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_plugin_payment_state_machine_config_with_http_info(plugin_name, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_plugin_payment_state_machine_config_with_http_info(plugin_name, created_by, **kwargs)  # noqa: E501
@@ -409,11 +409,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_plugin_payment_state_machine_config_with_http_info(plugin_name, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_plugin_payment_state_machine_config_with_http_info(plugin_name, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -424,7 +424,7 @@ class TenantApi(object):
         """
 
         all_params = ['plugin_name', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -482,7 +482,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -493,11 +493,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_push_notification_callbacks(created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_push_notification_callbacks(created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str created_by: (required)
         :param Str reason:
         :param Str comment:
@@ -506,7 +506,7 @@ class TenantApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_push_notification_callbacks_with_http_info(created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_push_notification_callbacks_with_http_info(created_by, **kwargs)  # noqa: E501
@@ -517,11 +517,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_push_notification_callbacks_with_http_info(created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_push_notification_callbacks_with_http_info(created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str created_by: (required)
         :param Str reason:
         :param Str comment:
@@ -531,7 +531,7 @@ class TenantApi(object):
         """
 
         all_params = ['created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -581,7 +581,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -592,11 +592,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_user_key_value(key_name, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_user_key_value(key_name, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str key_name: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -606,7 +606,7 @@ class TenantApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.delete_user_key_value_with_http_info(key_name, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_user_key_value_with_http_info(key_name, created_by, **kwargs)  # noqa: E501
@@ -617,11 +617,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_user_key_value_with_http_info(key_name, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.delete_user_key_value_with_http_info(key_name, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str key_name: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -632,7 +632,7 @@ class TenantApi(object):
         """
 
         all_params = ['key_name', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -690,7 +690,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -701,18 +701,18 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_all_plugin_configuration(key_prefix, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_all_plugin_configuration(key_prefix, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str key_prefix: (required)
         :return: List[TenantKeyValue]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_all_plugin_configuration_with_http_info(key_prefix, **kwargs)  # noqa: E501
         else:
             (data) = self.get_all_plugin_configuration_with_http_info(key_prefix, **kwargs)  # noqa: E501
@@ -723,11 +723,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_all_plugin_configuration_with_http_info(key_prefix, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_all_plugin_configuration_with_http_info(key_prefix, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str key_prefix: (required)
         :return: List[TenantKeyValue]
                  If the method is called asynchronously,
@@ -735,7 +735,7 @@ class TenantApi(object):
         """
 
         all_params = ['key_prefix']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -787,7 +787,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='List[TenantKeyValue]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -798,17 +798,17 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_per_tenant_configuration(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_per_tenant_configuration(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: TenantKeyValue
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_per_tenant_configuration_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_per_tenant_configuration_with_http_info(**kwargs)  # noqa: E501
@@ -819,18 +819,18 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_per_tenant_configuration_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_per_tenant_configuration_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: TenantKeyValue
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -874,7 +874,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='TenantKeyValue',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -885,18 +885,18 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_plugin_configuration(plugin_name, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_plugin_configuration(plugin_name, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :return: TenantKeyValue
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_plugin_configuration_with_http_info(plugin_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_plugin_configuration_with_http_info(plugin_name, **kwargs)  # noqa: E501
@@ -907,11 +907,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_plugin_configuration_with_http_info(plugin_name, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_plugin_configuration_with_http_info(plugin_name, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :return: TenantKeyValue
                  If the method is called asynchronously,
@@ -919,7 +919,7 @@ class TenantApi(object):
         """
 
         all_params = ['plugin_name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -971,7 +971,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='TenantKeyValue',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -982,18 +982,18 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_plugin_payment_state_machine_config(plugin_name, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_plugin_payment_state_machine_config(plugin_name, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :return: TenantKeyValue
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_plugin_payment_state_machine_config_with_http_info(plugin_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_plugin_payment_state_machine_config_with_http_info(plugin_name, **kwargs)  # noqa: E501
@@ -1004,11 +1004,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_plugin_payment_state_machine_config_with_http_info(plugin_name, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_plugin_payment_state_machine_config_with_http_info(plugin_name, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :return: TenantKeyValue
                  If the method is called asynchronously,
@@ -1016,7 +1016,7 @@ class TenantApi(object):
         """
 
         all_params = ['plugin_name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1068,7 +1068,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='TenantKeyValue',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1079,17 +1079,17 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_push_notification_callbacks(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_push_notification_callbacks(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: TenantKeyValue
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_push_notification_callbacks_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_push_notification_callbacks_with_http_info(**kwargs)  # noqa: E501
@@ -1100,18 +1100,18 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_push_notification_callbacks_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_push_notification_callbacks_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: TenantKeyValue
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1155,7 +1155,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='TenantKeyValue',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1166,18 +1166,18 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_tenant(tenant_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_tenant(tenant_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str tenant_id: (required)
         :return: Tenant
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_tenant_with_http_info(tenant_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_tenant_with_http_info(tenant_id, **kwargs)  # noqa: E501
@@ -1188,11 +1188,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_tenant_with_http_info(tenant_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_tenant_with_http_info(tenant_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str tenant_id: (required)
         :return: Tenant
                  If the method is called asynchronously,
@@ -1200,7 +1200,7 @@ class TenantApi(object):
         """
 
         all_params = ['tenant_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1252,7 +1252,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='Tenant',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1263,18 +1263,18 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_tenant_by_api_key(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_tenant_by_api_key(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str api_key:
         :return: Tenant
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_tenant_by_api_key_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_tenant_by_api_key_with_http_info(**kwargs)  # noqa: E501
@@ -1285,11 +1285,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_tenant_by_api_key_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_tenant_by_api_key_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str api_key:
         :return: Tenant
                  If the method is called asynchronously,
@@ -1297,7 +1297,7 @@ class TenantApi(object):
         """
 
         all_params = ['api_key']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1343,7 +1343,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='Tenant',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1354,18 +1354,18 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_user_key_value(key_name, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_user_key_value(key_name, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str key_name: (required)
         :return: TenantKeyValue
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_user_key_value_with_http_info(key_name, **kwargs)  # noqa: E501
         else:
             (data) = self.get_user_key_value_with_http_info(key_name, **kwargs)  # noqa: E501
@@ -1376,11 +1376,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_user_key_value_with_http_info(key_name, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_user_key_value_with_http_info(key_name, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str key_name: (required)
         :return: TenantKeyValue
                  If the method is called asynchronously,
@@ -1388,7 +1388,7 @@ class TenantApi(object):
         """
 
         all_params = ['key_name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1440,7 +1440,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='TenantKeyValue',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1451,11 +1451,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.insert_user_key_value(key_name, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.insert_user_key_value(key_name, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str key_name: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -1466,7 +1466,7 @@ class TenantApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.insert_user_key_value_with_http_info(key_name, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.insert_user_key_value_with_http_info(key_name, body, created_by, **kwargs)  # noqa: E501
@@ -1477,11 +1477,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.insert_user_key_value_with_http_info(key_name, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.insert_user_key_value_with_http_info(key_name, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str key_name: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -1493,7 +1493,7 @@ class TenantApi(object):
         """
 
         all_params = ['key_name', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1565,7 +1565,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='TenantKeyValue',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1576,11 +1576,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.register_push_notification_callback(created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.register_push_notification_callback(created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str created_by: (required)
         :param Str cb:
         :param Str reason:
@@ -1590,7 +1590,7 @@ class TenantApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.register_push_notification_callback_with_http_info(created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.register_push_notification_callback_with_http_info(created_by, **kwargs)  # noqa: E501
@@ -1601,11 +1601,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.register_push_notification_callback_with_http_info(created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.register_push_notification_callback_with_http_info(created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str created_by: (required)
         :param Str cb:
         :param Str reason:
@@ -1616,7 +1616,7 @@ class TenantApi(object):
         """
 
         all_params = ['created_by', 'cb', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1676,7 +1676,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='TenantKeyValue',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1687,11 +1687,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_per_tenant_configuration(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_per_tenant_configuration(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -1701,7 +1701,7 @@ class TenantApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.upload_per_tenant_configuration_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.upload_per_tenant_configuration_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -1712,11 +1712,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_per_tenant_configuration_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_per_tenant_configuration_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -1727,7 +1727,7 @@ class TenantApi(object):
         """
 
         all_params = ['body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1791,7 +1791,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='TenantKeyValue',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1802,11 +1802,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_plugin_configuration(plugin_name, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_plugin_configuration(plugin_name, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -1817,7 +1817,7 @@ class TenantApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.upload_plugin_configuration_with_http_info(plugin_name, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.upload_plugin_configuration_with_http_info(plugin_name, body, created_by, **kwargs)  # noqa: E501
@@ -1828,11 +1828,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_plugin_configuration_with_http_info(plugin_name, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_plugin_configuration_with_http_info(plugin_name, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -1844,7 +1844,7 @@ class TenantApi(object):
         """
 
         all_params = ['plugin_name', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1916,7 +1916,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='TenantKeyValue',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1927,11 +1927,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_plugin_payment_state_machine_config(plugin_name, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_plugin_payment_state_machine_config(plugin_name, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -1942,7 +1942,7 @@ class TenantApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.upload_plugin_payment_state_machine_config_with_http_info(plugin_name, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.upload_plugin_payment_state_machine_config_with_http_info(plugin_name, body, created_by, **kwargs)  # noqa: E501
@@ -1953,11 +1953,11 @@ class TenantApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_plugin_payment_state_machine_config_with_http_info(plugin_name, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_plugin_payment_state_machine_config_with_http_info(plugin_name, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -1969,7 +1969,7 @@ class TenantApi(object):
         """
 
         all_params = ['plugin_name', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2041,7 +2041,7 @@ class TenantApi(object):
             files=local_var_files,
             response_type='TenantKeyValue',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

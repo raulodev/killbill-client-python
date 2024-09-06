@@ -57,11 +57,11 @@ class PaymentGatewayApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.build_combo_form_descriptor(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.build_combo_form_descriptor(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param ComboHostedPaymentPage body: (required)
         :param Str created_by: (required)
         :param List[Str] control_plugin_name:
@@ -73,7 +73,7 @@ class PaymentGatewayApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.build_combo_form_descriptor_with_http_info(body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.build_combo_form_descriptor_with_http_info(body, created_by, **kwargs)  # noqa: E501
@@ -84,11 +84,11 @@ class PaymentGatewayApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.build_combo_form_descriptor_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.build_combo_form_descriptor_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param ComboHostedPaymentPage body: (required)
         :param Str created_by: (required)
         :param List[Str] control_plugin_name:
@@ -101,7 +101,7 @@ class PaymentGatewayApi(object):
         """
 
         all_params = ['body', 'created_by', 'control_plugin_name', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -171,7 +171,7 @@ class PaymentGatewayApi(object):
             files=local_var_files,
             response_type='HostedPaymentPageFormDescriptor',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -182,11 +182,11 @@ class PaymentGatewayApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.build_form_descriptor(account_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.build_form_descriptor(account_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param HostedPaymentPageFields body: (required)
         :param Str created_by: (required)
@@ -200,7 +200,7 @@ class PaymentGatewayApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.build_form_descriptor_with_http_info(account_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.build_form_descriptor_with_http_info(account_id, body, created_by, **kwargs)  # noqa: E501
@@ -211,11 +211,11 @@ class PaymentGatewayApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.build_form_descriptor_with_http_info(account_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.build_form_descriptor_with_http_info(account_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :param HostedPaymentPageFields body: (required)
         :param Str created_by: (required)
@@ -230,7 +230,7 @@ class PaymentGatewayApi(object):
         """
 
         all_params = ['account_id', 'body', 'created_by', 'payment_method_id', 'control_plugin_name', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -310,7 +310,7 @@ class PaymentGatewayApi(object):
             files=local_var_files,
             response_type='HostedPaymentPageFormDescriptor',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -321,11 +321,11 @@ class PaymentGatewayApi(object):
 
         The response is built by the appropriate plugin  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.process_notification(plugin_name, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.process_notification(plugin_name, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -338,7 +338,7 @@ class PaymentGatewayApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.process_notification_with_http_info(plugin_name, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.process_notification_with_http_info(plugin_name, body, created_by, **kwargs)  # noqa: E501
@@ -349,11 +349,11 @@ class PaymentGatewayApi(object):
 
         The response is built by the appropriate plugin  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.process_notification_with_http_info(plugin_name, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.process_notification_with_http_info(plugin_name, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str plugin_name: (required)
         :param Str body: (required)
         :param Str created_by: (required)
@@ -367,7 +367,7 @@ class PaymentGatewayApi(object):
         """
 
         all_params = ['plugin_name', 'body', 'created_by', 'control_plugin_name', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -445,7 +445,7 @@ class PaymentGatewayApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

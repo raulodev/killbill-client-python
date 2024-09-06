@@ -57,11 +57,11 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_queue_entries(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_queue_entries(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id:
         :param Str queue_name:
         :param Str service_name:
@@ -76,7 +76,7 @@ class AdminApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.get_queue_entries_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_queue_entries_with_http_info(**kwargs)  # noqa: E501
@@ -87,11 +87,11 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_queue_entries_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_queue_entries_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id:
         :param Str queue_name:
         :param Str service_name:
@@ -107,7 +107,7 @@ class AdminApi(object):
         """
 
         all_params = ['account_id', 'queue_name', 'service_name', 'with_history', 'min_date', 'max_date', 'with_in_processing', 'with_bus_events', 'with_notifications']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -169,7 +169,7 @@ class AdminApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -180,18 +180,18 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.invalidates_cache(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.invalidates_cache(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str cache_name:
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.invalidates_cache_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.invalidates_cache_with_http_info(**kwargs)  # noqa: E501
@@ -202,11 +202,11 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.invalidates_cache_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.invalidates_cache_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str cache_name:
         :return: None
                  If the method is called asynchronously,
@@ -214,7 +214,7 @@ class AdminApi(object):
         """
 
         all_params = ['cache_name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -260,7 +260,7 @@ class AdminApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -271,18 +271,18 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.invalidates_cache_by_account(account_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.invalidates_cache_by_account(account_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.invalidates_cache_by_account_with_http_info(account_id, **kwargs)  # noqa: E501
         else:
             (data) = self.invalidates_cache_by_account_with_http_info(account_id, **kwargs)  # noqa: E501
@@ -293,11 +293,11 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.invalidates_cache_by_account_with_http_info(account_id, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.invalidates_cache_by_account_with_http_info(account_id, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str account_id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -305,7 +305,7 @@ class AdminApi(object):
         """
 
         all_params = ['account_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -357,7 +357,7 @@ class AdminApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -368,17 +368,17 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.invalidates_cache_by_tenant(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.invalidates_cache_by_tenant(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.invalidates_cache_by_tenant_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.invalidates_cache_by_tenant_with_http_info(**kwargs)  # noqa: E501
@@ -389,18 +389,18 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.invalidates_cache_by_tenant_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.invalidates_cache_by_tenant_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -444,7 +444,7 @@ class AdminApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -455,17 +455,17 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.put_in_rotation(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.put_in_rotation(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.put_in_rotation_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.put_in_rotation_with_http_info(**kwargs)  # noqa: E501
@@ -476,18 +476,18 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.put_in_rotation_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.put_in_rotation_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -531,7 +531,7 @@ class AdminApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -542,17 +542,17 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.put_out_of_rotation(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.put_out_of_rotation(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.put_out_of_rotation_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.put_out_of_rotation_with_http_info(**kwargs)  # noqa: E501
@@ -563,18 +563,18 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.put_out_of_rotation_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.put_out_of_rotation_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -618,7 +618,7 @@ class AdminApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -629,11 +629,11 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.trigger_invoice_generation_for_parked_accounts(created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.trigger_invoice_generation_for_parked_accounts(created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str created_by: (required)
         :param Int offset:
         :param Int limit:
@@ -645,7 +645,7 @@ class AdminApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.trigger_invoice_generation_for_parked_accounts_with_http_info(created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.trigger_invoice_generation_for_parked_accounts_with_http_info(created_by, **kwargs)  # noqa: E501
@@ -656,11 +656,11 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.trigger_invoice_generation_for_parked_accounts_with_http_info(created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.trigger_invoice_generation_for_parked_accounts_with_http_info(created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str created_by: (required)
         :param Int offset:
         :param Int limit:
@@ -673,7 +673,7 @@ class AdminApi(object):
         """
 
         all_params = ['created_by', 'offset', 'limit', 'plugin_property', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -738,7 +738,7 @@ class AdminApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -749,11 +749,11 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_payment_transaction_state(payment_id, payment_transaction_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.update_payment_transaction_state(payment_id, payment_transaction_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str payment_id: (required)
         :param Str payment_transaction_id: (required)
         :param AdminPayment body: (required)
@@ -765,7 +765,7 @@ class AdminApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('is_async'):
             return self.update_payment_transaction_state_with_http_info(payment_id, payment_transaction_id, body, created_by, **kwargs)  # noqa: E501
         else:
             (data) = self.update_payment_transaction_state_with_http_info(payment_id, payment_transaction_id, body, created_by, **kwargs)  # noqa: E501
@@ -776,11 +776,11 @@ class AdminApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_payment_transaction_state_with_http_info(payment_id, payment_transaction_id, body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.update_payment_transaction_state_with_http_info(payment_id, payment_transaction_id, body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str payment_id: (required)
         :param Str payment_transaction_id: (required)
         :param AdminPayment body: (required)
@@ -793,7 +793,7 @@ class AdminApi(object):
         """
 
         all_params = ['payment_id', 'payment_transaction_id', 'body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
+        all_params.append('is_async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -873,7 +873,7 @@ class AdminApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            is_async=params.get('is_async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

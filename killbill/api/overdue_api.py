@@ -57,17 +57,17 @@ class OverdueApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_overdue_config_json(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_overdue_config_json(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: Overdue
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("is_async"):
             return self.get_overdue_config_json_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_overdue_config_json_with_http_info(**kwargs)  # noqa: E501
@@ -78,31 +78,31 @@ class OverdueApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_overdue_config_json_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_overdue_config_json_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: Overdue
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params.append("is_async")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_overdue_config_json" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -117,44 +117,51 @@ class OverdueApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Killbill Api Key', 'Killbill Api Secret', 'basicAuth']  # noqa: E501
+        auth_settings = [
+            "Killbill Api Key",
+            "Killbill Api Secret",
+            "basicAuth",
+        ]  # noqa: E501
 
         return self.api_client.call_api(
-            '/1.0/kb/overdue', 'GET',
+            "/1.0/kb/overdue",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Overdue',  # noqa: E501
+            response_type="Overdue",  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            is_async=params.get("is_async"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_overdue_config_xml(self, **kwargs):  # noqa: E501
         """Retrieve the overdue config as XML  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_overdue_config_xml(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_overdue_config_xml(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: Str
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("is_async"):
             return self.get_overdue_config_xml_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_overdue_config_xml_with_http_info(**kwargs)  # noqa: E501
@@ -165,31 +172,31 @@ class OverdueApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_overdue_config_xml_with_http_info(async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.get_overdue_config_xml_with_http_info(is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :return: Str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params.append("is_async")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_overdue_config_xml" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -204,38 +211,47 @@ class OverdueApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['text/xml'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["text/xml"]
+        )  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Killbill Api Key', 'Killbill Api Secret', 'basicAuth']  # noqa: E501
+        auth_settings = [
+            "Killbill Api Key",
+            "Killbill Api Secret",
+            "basicAuth",
+        ]  # noqa: E501
 
         return self.api_client.call_api(
-            '/1.0/kb/overdue/xml', 'GET',
+            "/1.0/kb/overdue/xml",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Str',  # noqa: E501
+            response_type="Str",  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            is_async=params.get("is_async"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def upload_overdue_config_json(self, body=None, created_by=None, **kwargs):  # noqa: E501
+    def upload_overdue_config_json(
+        self, body=None, created_by=None, **kwargs
+    ):  # noqa: E501
         """Upload the full overdue config as JSON  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_overdue_config_json(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_overdue_config_json(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Overdue body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -244,23 +260,29 @@ class OverdueApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
-            return self.upload_overdue_config_json_with_http_info(body, created_by, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("is_async"):
+            return self.upload_overdue_config_json_with_http_info(
+                body, created_by, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.upload_overdue_config_json_with_http_info(body, created_by, **kwargs)  # noqa: E501
+            (data) = self.upload_overdue_config_json_with_http_info(
+                body, created_by, **kwargs
+            )  # noqa: E501
             return data
 
-    def upload_overdue_config_json_with_http_info(self, body=None, created_by=None, **kwargs):  # noqa: E501
+    def upload_overdue_config_json_with_http_info(
+        self, body=None, created_by=None, **kwargs
+    ):  # noqa: E501
         """Upload the full overdue config as JSON  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_overdue_config_json_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_overdue_config_json_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Overdue body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -270,29 +292,31 @@ class OverdueApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body", "created_by", "reason", "comment"]  # noqa: E501
+        all_params.append("is_async")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method upload_overdue_config_json" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `upload_overdue_config_json`")  # noqa: E501
+        if "body" not in params or params["body"] is None:
+            raise ValueError(
+                "Missing the required parameter `body` when calling `upload_overdue_config_json`"
+            )  # noqa: E501
         # verify the required parameter 'created_by' is set
-        if ('created_by' not in params or
-                params['created_by'] is None):
-            raise ValueError("Missing the required parameter `created_by` when calling `upload_overdue_config_json`")  # noqa: E501
+        if "created_by" not in params or params["created_by"] is None:
+            raise ValueError(
+                "Missing the required parameter `created_by` when calling `upload_overdue_config_json`"
+            )  # noqa: E501
 
         collection_formats = {}
 
@@ -301,56 +325,68 @@ class OverdueApi(object):
         query_params = []
 
         header_params = {}
-        if 'created_by' in params:
-            header_params['X-Killbill-CreatedBy'] = params['created_by']  # noqa: E501
-        if 'reason' in params:
-            header_params['X-Killbill-Reason'] = params['reason']  # noqa: E501
-        if 'comment' in params:
-            header_params['X-Killbill-Comment'] = params['comment']  # noqa: E501
+        if "created_by" in params:
+            header_params["X-Killbill-CreatedBy"] = params["created_by"]  # noqa: E501
+        if "reason" in params:
+            header_params["X-Killbill-Reason"] = params["reason"]  # noqa: E501
+        if "comment" in params:
+            header_params["X-Killbill-Comment"] = params["comment"]  # noqa: E501
 
         form_params = []
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+        header_params["Content-Type"] = (
+            self.api_client.select_header_content_type(  # noqa: E501
+                ["application/json"]
+            )
+        )  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Killbill Api Key', 'Killbill Api Secret', 'basicAuth']  # noqa: E501
+        auth_settings = [
+            "Killbill Api Key",
+            "Killbill Api Secret",
+            "basicAuth",
+        ]  # noqa: E501
 
         return self.api_client.call_api(
-            '/1.0/kb/overdue', 'POST',
+            "/1.0/kb/overdue",
+            "POST",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Overdue',  # noqa: E501
+            response_type="Overdue",  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            is_async=params.get("is_async"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def upload_overdue_config_xml(self, body=None, created_by=None, **kwargs):  # noqa: E501
+    def upload_overdue_config_xml(
+        self, body=None, created_by=None, **kwargs
+    ):  # noqa: E501
         """Upload the full overdue config as XML  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_overdue_config_xml(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_overdue_config_xml(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -359,23 +395,29 @@ class OverdueApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
-            return self.upload_overdue_config_xml_with_http_info(body, created_by, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("is_async"):
+            return self.upload_overdue_config_xml_with_http_info(
+                body, created_by, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.upload_overdue_config_xml_with_http_info(body, created_by, **kwargs)  # noqa: E501
+            (data) = self.upload_overdue_config_xml_with_http_info(
+                body, created_by, **kwargs
+            )  # noqa: E501
             return data
 
-    def upload_overdue_config_xml_with_http_info(self, body=None, created_by=None, **kwargs):  # noqa: E501
+    def upload_overdue_config_xml_with_http_info(
+        self, body=None, created_by=None, **kwargs
+    ):  # noqa: E501
         """Upload the full overdue config as XML  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.upload_overdue_config_xml_with_http_info(body, created_by, async=True)
+        asynchronous HTTP request, please pass is_async=True
+        >>> thread = api.upload_overdue_config_xml_with_http_info(body, created_by, is_async=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param is_async bool
         :param Str body: (required)
         :param Str created_by: (required)
         :param Str reason:
@@ -385,29 +427,31 @@ class OverdueApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'created_by', 'reason', 'comment']  # noqa: E501
-        all_params.append('async')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["body", "created_by", "reason", "comment"]  # noqa: E501
+        all_params.append("is_async")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method upload_overdue_config_xml" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `upload_overdue_config_xml`")  # noqa: E501
+        if "body" not in params or params["body"] is None:
+            raise ValueError(
+                "Missing the required parameter `body` when calling `upload_overdue_config_xml`"
+            )  # noqa: E501
         # verify the required parameter 'created_by' is set
-        if ('created_by' not in params or
-                params['created_by'] is None):
-            raise ValueError("Missing the required parameter `created_by` when calling `upload_overdue_config_xml`")  # noqa: E501
+        if "created_by" not in params or params["created_by"] is None:
+            raise ValueError(
+                "Missing the required parameter `created_by` when calling `upload_overdue_config_xml`"
+            )  # noqa: E501
 
         collection_formats = {}
 
@@ -416,38 +460,45 @@ class OverdueApi(object):
         query_params = []
 
         header_params = {}
-        if 'created_by' in params:
-            header_params['X-Killbill-CreatedBy'] = params['created_by']  # noqa: E501
-        if 'reason' in params:
-            header_params['X-Killbill-Reason'] = params['reason']  # noqa: E501
-        if 'comment' in params:
-            header_params['X-Killbill-Comment'] = params['comment']  # noqa: E501
+        if "created_by" in params:
+            header_params["X-Killbill-CreatedBy"] = params["created_by"]  # noqa: E501
+        if "reason" in params:
+            header_params["X-Killbill-Reason"] = params["reason"]  # noqa: E501
+        if "comment" in params:
+            header_params["X-Killbill-Comment"] = params["comment"]  # noqa: E501
 
         form_params = []
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
+        if "body" in params:
+            body_params = params["body"]
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['text/xml'])  # noqa: E501
+        header_params["Content-Type"] = self.api_client.select_header_content_type(
+            ["text/xml"]
+        )  # noqa: E501  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Killbill Api Key', 'Killbill Api Secret', 'basicAuth']  # noqa: E501
+        auth_settings = [
+            "Killbill Api Key",
+            "Killbill Api Secret",
+            "basicAuth",
+        ]  # noqa: E501
 
         return self.api_client.call_api(
-            '/1.0/kb/overdue/xml', 'POST',
+            "/1.0/kb/overdue/xml",
+            "POST",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Str',  # noqa: E501
+            response_type="Str",  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            is_async=params.get("is_async"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
