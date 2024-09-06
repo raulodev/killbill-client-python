@@ -52,8 +52,8 @@ class ApiClient(object):
     NATIVE_TYPES_MAPPING = {
         'int': int,
         'Int': int,
-        'long': int if six.PY3 else long,  # noqa: F821
-        'Long': int if six.PY3 else long,
+        'long': int if six.PY3 else int,  # noqa: F821
+        'Long': int if six.PY3 else int,
         'float': float,
         'Float': float,
         'str': str,
@@ -282,12 +282,12 @@ class ApiClient(object):
     def call_api(self, resource_path, method,
                  path_params=None, query_params=None, header_params=None,
                  body=None, post_params=None, files=None,
-                 response_type=None, auth_settings=None, async=None,
+                 response_type=None, auth_settings=None, is_async=None,
                  _return_http_data_only=None, collection_formats=None,
                  _preload_content=True, _request_timeout=None):
         """Makes the HTTP request (synchronous) and returns deserialized data.
 
-        To make an async request, set the async parameter.
+        To make an is_async request, set the is_async parameter.
 
         :param resource_path: Path to method endpoint.
         :param method: Method to call.
@@ -302,7 +302,7 @@ class ApiClient(object):
         :param response: Response data type.
         :param files dict: key -> filename, value -> filepath,
             for `multipart/form-data`.
-        :param async bool: execute request asynchronously
+        :param is_async bool: execute request asynchronously
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param collection_formats: dict of collection formats for path, query,
@@ -315,13 +315,13 @@ class ApiClient(object):
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
         :return:
-            If async parameter is True,
+            If is_async parameter is True,
             the request will be called asynchronously.
             The method will return the request thread.
-            If parameter async is False or missing,
+            If parameter is_async is False or missing,
             then the method will return the response directly.
         """
-        if not async:
+        if not is_async:
             return self.__call_api(resource_path, method,
                                    path_params, query_params, header_params,
                                    body, post_params, files,
